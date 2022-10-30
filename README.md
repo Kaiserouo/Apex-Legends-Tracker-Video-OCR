@@ -26,9 +26,15 @@ For the video, here is a youtube version (in 60fps). Click the image to see:
    + **ONLY SCROLL WITH YOUR MOUSE SCROLL**. Use the scroll bar on the right will cause the program to break.
    + **DON'T SCROLL TOO QUICKLY**. My example video (`example.mkv`) flipped too quickly for some latter legends and some trackers are not recorded. You can scroll front or back, as long as you don't use the scroll bar.
 5. After you scroll through all trackers you want, return back to `Legends` page and stop recording.
-6. Covert your video to 10fps (if you didn't set OBS studio to 10fps).
+6. Convert your video to 10fps (if you didn't set OBS studio to 10fps).
+   + For reference, `ffmpeg -i <input_video_name> -filter:v fps=10 <output_video_name>`
 7. Go to `main.py` and set up the variables in `Config`.
    + Mainly, `VIDEO` and `OUT_FILE`.
 8. Do `python main.py`
    + For `example.mkv` (10fps, 2 min 39 sec), it took like 10 minutes.
-9. Profit. Check output json file for result.
+9.  Profit. Check output json file for result.
+
+## Requirements
++ Python 3.10
++ `pytesseract`, and thus also [Tesseract-OCR](https://github.com/tesseract-ocr/tesseract).
++ OpenCV for python

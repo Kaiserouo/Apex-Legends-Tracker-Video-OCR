@@ -1,5 +1,4 @@
 import cv2 as cv
-import itertools, more_itertools
 import pytesseract
 import string
 import json
