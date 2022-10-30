@@ -110,6 +110,7 @@ def update(d, scanned_str):
     ls = [s.strip() for s in scanned_str.replace('\n\n', '\n').split('\n')]
     pair_ls = getTagNumberPairs(ls)
     if len(pair_ls) < 3:
+        # did not detech enough trackers, might not even be in the tracker page
         return
     for tag, num in pair_ls:
         d[ls[0]][tag].update([num])
@@ -119,7 +120,7 @@ def cleanDict(d):
         Do dict cleanup and convert to proper dict object.
         - Sometimes OCR may recognize numbers wrong, so use most common ones
         - Sometimes OCR may recognize tags wrong, but only for a short time or
-          some frames, so d
+          some frames, so require the most common one to appear at least 3 frames
     """
     result = dict()
     for legend_name, legend in d.items():
