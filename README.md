@@ -2,6 +2,8 @@
 
 Do OCR for trackers by recorded videos.
 
+**Not functional for new GUI in S15.**
+
 ## Motivation
 Apex Legend Status (ALS) and other API websites are good, but since they can only access selected legend, and they cannot read all trackers for a legend (only those 3 you put on your banner), so for someone wanting to take a snapshot of **all** trackers of all legends, this is not practical to use.
 
